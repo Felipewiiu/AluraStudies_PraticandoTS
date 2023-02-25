@@ -1,4 +1,4 @@
-import React from 'react'
+import './style.scss'
 
 export default function Lista() {
 
@@ -23,11 +23,11 @@ export default function Lista() {
     
     
   return (
-    <aside>
+    <aside className='listaTarefas'>
         <h2>Estudo do dia</h2>
         <ul>
           {Tarefa.map(tarefa =>(
-              <li key={tarefa.id}>
+              <li key={tarefa.id} className='item'>
               <h3>
                   {tarefa.tarefa}
               </h3>
