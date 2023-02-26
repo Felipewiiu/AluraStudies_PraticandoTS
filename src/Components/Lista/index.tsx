@@ -1,40 +1,41 @@
-import './style.scss'
+import Item from './Item'
+import style from './Lista.module.scss'
+import React, {useState} from 'react'
 
 export default function Lista() {
 
-    const Tarefa =[{
-        tarefa: "React",
-        tempo: "02:00:00",
-        id: 1
-      },
-      {
-        tarefa: "JavaScript",
-        tempo: "01:00:00",
-        id: 2
-        
-      },
-      {
-        tarefa: "Typescript",
-        tempo: "03:00:00",
-        id: 3
-      }
-    
-    ]
+    const [tarefas, setTarefas] = useState([{
+      tarefa: "React",
+      tempo: "02:00:00",
+      
+    },
+    {
+      tarefa: "JavaScript",
+      tempo: "01:00:00",
+      
+      
+    },
+    {
+      tarefa: "Typescript",
+      tempo: "03:00:00",
+      
+    }
+  
+  ])
+
     
     
   return (
-    <aside className='listaTarefas'>
-        <h2>Estudo do dia</h2>
+    <aside className={style.listaTarefas}>
+        <h2 onClick={() =>{
+          setTarefas([...tarefas, {tarefa:"Estudar estado ", tempo: "05:00:00"}])
+        }}>Estudos do dia</h2>
         <ul>
-          {Tarefa.map(tarefa =>(
-              <li key={tarefa.id} className='item'>
-              <h3>
-                  {tarefa.tarefa}
-              </h3>
-              <span>
-                  {tarefa.tempo}
-              </span>
-            </li>
+          {tarefas.map((item, index) =>(
+              <Item
+              key={index}
+                {...item}
+              />
           ))}
         </ul>
     </aside>
