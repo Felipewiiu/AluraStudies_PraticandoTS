@@ -12,7 +12,18 @@
 }
 ```
 
-## Tipos em typescript
+## Interface
+
+Uma interface é literalmente uma forma de colocarmos essa tipagem fora dos dois pontos : usando como nome. É como se fosse uma variável em que colocamos os tipos de variável dentro da própria variável.
+Exemplo:
+
+```
+interface ITarefa {
+    tarefa: string,
+    tempo: string
+}
+```
+
 
 
 
