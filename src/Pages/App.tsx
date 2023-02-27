@@ -10,6 +10,12 @@ function App() {
 
   const [tarefas, setTarefas] = useState<ITarefas[] | []>([])
 
+  const [selecionado, setSelecionado] = useState<ITarefas>();
+
+  function selecionaTarefa(tarefaSelecionada: ITarefa){
+    setSelecionado(tarefaSelecionada)
+  }
+
   return (
     <div className={style.AppStyle}>
     <Formulario setTarefas={setTarefas} />

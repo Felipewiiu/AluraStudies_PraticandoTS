@@ -24,6 +24,22 @@ interface ITarefa {
 }
 ```
 
+## uuid
+
+É uma biblioteca que permite gerar `id` aleatorio, para a instalação basta usar o comando ` npm i uuid`
+e depois o comando `npm audit fix --force` para baixar os tipos para o TS
+
+Exemplo do seu uso:
+```
+  {
+    ...this.state,
+    selecionado: false,
+    completado: false,
+    id: uuidv4()
+}
+```
+
+
 
 
 
