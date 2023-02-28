@@ -2,10 +2,13 @@ import ITarefas from '../../types/ITarefa'
 import Item from './Item'
 import style from './Lista.module.scss'
 
+interface Props{
+  tarefas: ITarefas[]
+  selecionaTarefa: (tarefaSelecionada: ITarefas) => void
+}
 
 
-
-export default function Lista({ tarefas } : { tarefas: ITarefas[] }) {
+export default function Lista({ tarefas, selecionaTarefa } : Props) {
 
 
   return (
@@ -14,7 +17,8 @@ export default function Lista({ tarefas } : { tarefas: ITarefas[] }) {
         <ul>
           {tarefas.map((item, index) =>(
               <Item
-              key={index}
+              selecionaTarefa={selecionaTarefa}
+              key={item.id}
                 {...item}
               />
           ))}
