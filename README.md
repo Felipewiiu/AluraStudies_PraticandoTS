@@ -39,6 +39,15 @@ Exemplo do seu uso:
 }
 ```
 
+## Valor padrão para parâmetros
+
+O javascript permite que seja passado um valor inicial para um parâmetro que é o caso do tempo do relógio que quando não a matéria selecionada o relogio recebe 0 ao em vez de undefined.
+
+```
+export default function Relogio({tempo}: Props)
+```
+
+
 
 
 
