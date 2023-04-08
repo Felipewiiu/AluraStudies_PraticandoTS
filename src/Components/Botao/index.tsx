@@ -16,3 +16,5 @@ function Botao({ onClick, type, children }: Props) {
     )
 }
 
+export default Botao
+
